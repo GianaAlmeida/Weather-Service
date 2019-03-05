@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Flag</th>
+  </tr>
+  {% for row in cards %}
+  <tr>
+    <td>{{row[1]}}</td>
+    <td>{{row[2]}}</td>
+  </tr>
+  {% endfor %}
+</table>

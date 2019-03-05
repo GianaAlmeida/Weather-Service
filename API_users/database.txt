@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS users(
+	PersonID int NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+	name varchar(255), 
+	password varchar(100),
+	authorization varchar(100)
+);
+
+CREATE TABLE IF NOT EXISTS authorization(
+	authorization varchar(100) PRIMARY KEY
+);
