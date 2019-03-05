@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Language" content="pt-br, en">
-	<title>API document</title>
 </head>
 <body>
 	<h2>Introduction</h2>
 	<p>
 		This project consists in a data product design that returns the weather for a region and time range.This documentation explain how our application works, used technologies and where we will host it.
 	</p>
-
 	<p>
 		<h4>Summary</h4>
 		<ul>
@@ -20,7 +18,6 @@
 		</ul> 
 	</p>
 	<br>
-
 	<h2 id="diagram"> Architeture diagram</h2>
 	<p>
 		We will have three different applications.
@@ -36,11 +33,8 @@
 	<br>
 	<p>
 		In the used strategy the client will not have direct access to the APIs. The user must use the API Gateway to communicate with the other APIs. <br>
-
 		The gateway automatically proxy all requests to the microservices, using their application name, as: when "API user" is registered, it is available on the gateway on the localhost:8080/user url.<br>
-
 		It will also be responsible for the authentication of users and making this interface between client requests (API consumer) and data product (API weather).<br>
-
 		Zuul proxy and docker technologies will be used.JWT authentication too.
 	</p>
 	<br>
@@ -55,7 +49,6 @@
 		In the next step, API consumer request any CRUD operation. The gateway verify if  it have the obrigatory datas. In case of complete data, send request to API weather who search in Mongodb database and return values. API gateway send to client this values.
 	</p>
 	<br>
-
 	<h2 id="install">Requirements and technologies</h2>
 	<p>
 		This project will be programmed in python), applying the Flask framework for the APIs.The Amazon Web Service will be used as cloud service.
@@ -80,13 +73,10 @@
 			</tr>
 		</table>
 		<br>
-
 		Each API will have its own database because both have different needs and characteristics. The "API users" use MySQL to attend the relational data as: a table with authorization types in the API, another with login data and so forth.
-		
 		The "API weather" used MongoDB because of geographic needs (nosql  facilitates clusters); Or because the data from weather stations (or possibles dataloggers) may come different, like in one region comes the pressure value and in another it doesn't.
 	</p>
 	<br>
-
 	<h2 id="request">Using the API</h2>
 	<p>
 		We have some "key files" in this repository. 
@@ -96,12 +86,9 @@
 		</ul>
 	</p>
 	<br>
-
 	<h2 id="ex">Examples</h2>
 	<p>
-		
 	</p>
 	<br>
-	
 </body>
 </html>
